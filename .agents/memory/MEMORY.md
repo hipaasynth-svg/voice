@@ -1,0 +1,1 @@
+- [Android call audio boundary](android-call-audio-boundary.md) — Treat VoIP/SIP as the practical non-rooted path; ordinary cellular call audio is not app-interceptable.

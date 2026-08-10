@@ -1,0 +1,24 @@
+kind = "mobile"
+previewPath = "/"
+title = "VoiceShift"
+description = "An Android-first VoIP voice changer companion for testing real-time voice styles, configuring call routing, and understanding what is possible on non-rooted devices."
+version = "1.0.0"
+id = "artifacts/voice-shift"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/" ]
+localPort = 24513
+
+[services.development]
+run = "pnpm --filter @workspace/voice-shift run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/voice-shift", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/voice-shift", "run", "serve" ]
+
+[services.env]
+PORT = "24513"
+BASE_PATH = "/"

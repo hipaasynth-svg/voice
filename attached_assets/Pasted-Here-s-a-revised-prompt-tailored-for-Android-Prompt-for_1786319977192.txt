@@ -1,0 +1,34 @@
+Here’s a revised prompt tailored for Android:
+
+Prompt for your agent:
+Build a real-time voice changer for Android that I can use during phone calls.
+Important Constraints
+	•	Target device: Android (non-rooted preferred, but mention if root is required for full functionality)
+	•	I need to change my voice in real time so the other person hears the modified voice
+	•	Prefer solutions that work with regular cellular calls if possible. If that’s too restricted by Android, then fall back to VoIP/SIP softphone approach.
+Core Requirements
+	•	Real-time voice conversion (not just simple pitch shift)
+	•	Low latency (under 200ms if possible)
+	•	Ability to switch between different voice styles (male, female, deeper, higher, robotic, etc.)
+	•	Easy on/off toggle during a call
+	•	Works while the screen is off or the app is in the background
+Preferred Approaches (in order of preference)
+	1	Native Android app (Kotlin preferred) that intercepts/modifies call audio
+	2	Accessibility Service based solution (if full call audio access isn’t possible without root)
+	3	VoIP/SIP softphone with built-in real-time voice conversion (so I make calls through the app instead of the normal dialer)
+	4	Termux + Python real-time processing as a fallback
+Technical Preferences
+	•	Use a lightweight real-time voice conversion method (RVC-style if feasible on mobile, or a lighter model like a small ONNX voice conversion model)
+	•	Support loading custom voice models if possible
+	•	Good noise suppression so it doesn’t sound terrible
+	•	Battery-conscious implementation
+Deliverables I want
+	1	Clear explanation of what is and isn’t possible on non-rooted Android
+	2	Recommended architecture
+	3	Working code or detailed implementation plan
+	4	Required permissions and any workarounds
+	5	Step-by-step setup instructions
+	6	How to actually route real calls through it
+Be honest about Android limitations. Start with the most practical working solution rather than the theoretically perfect one.
+
+Would you like me to make this prompt more focused on a specific approach (for example pure VoIP softphone, or trying to modify regular cellular calls)?
